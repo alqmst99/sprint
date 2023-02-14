@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+     <title>Document</title>
 </head>
 <body>
     <main>
         <div class="row">
             <div class="container">
                 <header>
-                    <div class="">
+                    <div class="container-fluid">
                         <figure><img src="" alt=""></figure>
                         <ul class="nav justify-content-end">
                             <li class="nav-item">
@@ -32,17 +33,20 @@
                         </nav>
                     </div>
                 </header>
-                <div class="ratio ratio-16x9">
-                    <iframe src="pages/events.html" frameborder="0" name="p" width="100%" height="100%"></iframe>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="pages/events.html" class="embed-responsive-item" frameborder="0" name="p" width="100%" height="1000px"></iframe>
                 </div>
-                <footer>
-                    <div >
-                        social
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                  <ul class="nav col-md-4 justify-content-star list-unstyled d-flex">
+                   
+                      <li class="ms-4 "><a class="text-muted" href="#"><i class="fab fa-facebook"></i></a></li>
+                      <li class="ms-4"><a class="text-muted" href="#"><i class="fab fa-instagram"></i></a></li>
+                      <li class="ms-4"><a class="text-muted" href="#"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                    <div class="col-md-4 d-flex align-items-end">
+                       <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
                     </div>
-                    <div class="footer justify-content-end">
-                        name
-                    </div>
-                </footer>
+                  </footer>
             </div>
         </div>
     </main>
