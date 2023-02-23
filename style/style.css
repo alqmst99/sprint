@@ -7,9 +7,13 @@
     width: 50%;
 }
 body{
-    
-    background: linear-gradient(90deg, rgba(219,226,62,0.770920868347339) 0%, rgba(36,121,9,1) 50%, rgba(0,255,188,0.7541141456582633) 100%);
+    width: 90%;
+    background: linear-gradient(90deg, rgba(219,226,62,0.770920868347339) 0%, rgba(36,121,9,1) 50%, rgba(0,255,188,0.7541141456582633) 90%);
+}
+.row{
+    margin-left: 10% !important;
 }
 .cards{
+    
     margin-top: 100px;
 }
