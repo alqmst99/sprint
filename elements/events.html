@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style/style.css">
+  <title>events</title>
+</head>
+
+<body style="width: 98%; background-color: transparent;">
+  <main>
+    <div class="row">
+      <div class="container">
+        <header>
+          <section>
+            <div class="d-flex justify-content-between align-self-center">
+
+              <button class="btn btn-success"> <a href="stats.html" class="btn btn-success"> <<< </a> </button>
+
+              <h1>HOME</h1>
+              <button class="btn btn-success"><a href="pastevents.html" class="btn btn-success">>></a> </button>
+            </div>
+          </section>
+        </header>
+        <section>
+          <div class="col-sm-2 col-md-8 col-8 justify-content-between" style="display: inline-block;">
+
+            <div class="form-check form-check-inline col-sm-6  col-md-3 " style="display: inline-block;">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Cinema</label>
+            </div>
+            <div class="form-check form-check-inline col-sm-6  col-md-3" style="display: inline-block;">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">Food Fair</label>
+            </div>
+            <div class="form-check form-check-inline col-sm-6  col-md-3" style="display: inline-block;">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+              <label class="form-check-label" for="inlineCheckbox3">Marathon</label>
+            </div>
+            <div class="form-check form-check-inline col-sm-6  col-md-3" style="display: inline-block;">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option4">
+              <label class="form-check-label" for="inlineCheckbox3">Museum Tour</label>
+            </div>
+            <div class="form-check form-check-inline col-sm-6  col-md-3" style="display: inline-block;">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option5">
+              <label class="form-check-label" for="inlineCheckbox3">Music Concert </label>
+            </div>
+            <div class="form-check form-check-inline col-sm-6  col-md-3" style="display: inline-block;">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option6">
+              <label class="form-check-label" for="inlineCheckbox3">costume Party</label>
+            </div>
+          </div>
+
+          <div class="col-sm-8 col-md-9 col-lg-3" style="display: inline-block;">
+            <form class="d-flex ">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3" style="margin-top: 15px;" id="event-card">
+          
+             
+        </section>
+
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="Script/data_1.js"></script>
+  <script src="Script/template.js"></script>
+  <script src="Script/main.js"></script>
+</body>
+
+</html>
