@@ -12,8 +12,8 @@ function printCheck (_id, array_cat){
     array_cat= array_cat.map(each =>{
         return `
         <div class="form-check form-check-inline col-sm-4  col-md-3  " style="display: inline-block;">
-        <input onclick="capture()" class="form-check-input" type="checkbox" name="category" id="${each}" value="${each}">
-        <label class="form-check-label" for="${each}">${each}</label>
+        <input onclick="capture()" class="form-check-input" type="checkbox" name="category" id= "${each}" value= "${each}">
+        <label class="form-check-label" for= "${each}" >${each}</label>
       </div>
         `
     })
