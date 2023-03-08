@@ -1,12 +1,12 @@
 //funciones de captura del objeto data
 
-let templates =(image,name,description, price)=>{
+let templates =(image,name,description, price, _id, category)=>{
     return ` 
     
-    <div class="col">
-      <div class="card shadow-sm" id="${name}"> 
-        <figure class="img-fluid d-block">
-          <img class="img-fluid col-12" src='${image}' alt="'${name}'">
+    
+      <div class="card m2 card-box shadow-sm" id="${name}" style="background: linear-gradient(90deg, rgba(226,62,217) 0%, rgba(9,20,168,0.3) 50%, rgba(226,62,217) 100%); border-radius: 10px;"> 
+        <figure class="d-block ">
+          <img class="card-img-top img-fit rounded" src='${image}' alt="'${name}'">
         </figure>
 
         <div class="card-body">
@@ -15,14 +15,14 @@ let templates =(image,name,description, price)=>{
           <p class="card-text">${price}$</p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary"><a
-                  href="details.html">ver</a></button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <button type="button" class="btn btn-lg btn-outline-primary">
+              <a href="./details.html?id=${_id}&&name=${name}&&category=${category}" target="p">ver</a></button>
+              
             </div>
 
           </div>
         </div>
       </div>
-    </div> `
+     `
  }
 

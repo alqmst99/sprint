@@ -1,14 +1,14 @@
-let eventsp = document.getElementById('event-past');
+
 let concurrent = data.currentDate
 let dat = data.events
-function createCardP() {
+function createCardP(id_container, dat) {
     let templatep = []
-    
+    let eventsp = document.getElementById(id_container);
 
         for (let eventos of dat) {
             if (eventos.date >= concurrent) {
             console.log(templatep.join(''))
-            templatep.push(templates(eventos.image, eventos.name, eventos.description, eventos.price))
+            templatep.push(templates(eventos.image, eventos.name, eventos.description, eventos.price, eventos._id, eventos.category))
 
         }
        
@@ -16,4 +16,4 @@ function createCardP() {
     console.log(templatep);
     eventsp.innerHTML = templatep.join('')
 }
-createCardP()
+createCardP('event-past',dat)
