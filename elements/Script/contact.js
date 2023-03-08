@@ -19,4 +19,4 @@ function eventsFilterCheck(){
  submitBottom.addEventListener(
     'click',
     captureForm
- )
+ )  

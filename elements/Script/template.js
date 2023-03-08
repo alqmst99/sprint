@@ -24,5 +24,5 @@ let templates =(image,name,description, price, _id, category)=>{
         </div>
       </div>
      `
- }
+ } 
 

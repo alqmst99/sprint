@@ -9,7 +9,7 @@ function capture(){
         createCardE('event-card', filter)
      
     }else{
-        printNon('event-card')
+        printNon('event-card') 
      
     }
 }

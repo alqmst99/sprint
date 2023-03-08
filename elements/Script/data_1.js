@@ -12,7 +12,7 @@ let data = {
         "capacity":45000,
         "assistance":42756,
         "price":5
-      },
+      }, 
       {
         _id: 2,
         "image":"https://i.postimg.cc/ZmD3Xf57/Korean-style.jpg",

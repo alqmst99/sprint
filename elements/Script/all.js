@@ -19,4 +19,4 @@ function createCard(id_container, dat) {
 }
 
 createCard('event-all', dat);
-
+ 

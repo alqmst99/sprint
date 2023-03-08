@@ -37,5 +37,6 @@ function createCardE(id_container, dat) {
     eventc.innerHTML = template.join('')
 }
 
-createCardE('event-card', dat);
+createCardE('event-card', dat); 
 
+ 

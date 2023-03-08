@@ -39,4 +39,4 @@ function createDetail(id_container, querys, dat){
    console.log(details)
 }
 createDetail('detail', name_query, dat)
-console.log(dat._id)
+console.log(dat._id) 

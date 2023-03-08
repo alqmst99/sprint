@@ -10,6 +10,6 @@ function capture(){
         createCardP('event-past', filter)
     }else{
     
-        printNon('event-past')
+        printNon('event-past') 
     }
 }

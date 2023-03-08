@@ -16,4 +16,4 @@ function createCardP(id_container, dat) {
     console.log(templatep);
     eventsp.innerHTML = templatep.join('')
 }
-createCardP('event-past',dat)
+createCardP('event-past',dat) 

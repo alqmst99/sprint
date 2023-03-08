@@ -21,3 +21,4 @@ function printCheck (_id, array_cat){
     container.innerHTML = array_cat.join('')
 }
 printCheck('check', array_cat)
+ 
