@@ -1,8 +1,7 @@
 
 
 
-let dat = data.events
-let concurrent = data.currentDate
+
 
 function createCard(id_container, dat) {
     let template = []
@@ -18,5 +17,5 @@ function createCard(id_container, dat) {
     eventc.innerHTML = template.join('')
 }
 
-createCard('event-all', dat);
+
  
