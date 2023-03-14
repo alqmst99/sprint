@@ -1,7 +1,7 @@
 
 
 
-function printCheck(_id, array_cat) {
+function printCheck2(_id, array_cat) {
     let container = document.getElementById(_id)
     array_cat = array_cat.map(each => {
         return `
@@ -11,10 +11,10 @@ function printCheck(_id, array_cat) {
       </div>
         `
     })
-    array_cat.push(`<input onkeyup="fetchApi()" id="search" class="contact-input col-sm-6 col-md-12" type="text" name="texto" placeholder="search">`)
+    array_cat.push(`<input onkeyup="fetchApi2()" id="search" class="contact-input col-sm-6 col-md-12" type="text" name="texto" placeholder="search">`)
     container.innerHTML = array_cat.join('')
 }
-async function fetchApi() {
+async function fetchApi2() {
     try {
         let urlApi = 'https://mh.up.railway.app/api/amazing-events?category'
         let fetchResponse = await fetch(urlApi)
@@ -28,7 +28,7 @@ async function fetchApi() {
 
             }
         })
-        printCheck('check', array_cat)
+        printCheck2('check', array_cat)
        
     }
     catch (error) {
@@ -36,4 +36,4 @@ async function fetchApi() {
     }
 
 }
-fetchApi()
+fetchApi2()

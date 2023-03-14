@@ -3,9 +3,9 @@ let query= location.search;
 let param = new URLSearchParams(query)
 let name_query= param.get('name')
 let cate_query= param.get('category')
-let id_query= param.get('_id')
+let id_query= param.get('id').valueOf()
 
-let dat = data.events
+
 
 
 function  templateDetails(each){
@@ -22,7 +22,7 @@ function  templateDetails(each){
             <p class="card-text"><b>${each.description} </b></p>
             <h5 class="card-text">${each.category} </h5>
             <p class="card-text">${each.price} $</p>
-            <p class="card-text"><small class="text-muted">${each.date}</small></p>
+            <p class="card-text"><small class="text-muted">${each.date.substring(0,10)}</small></p>
           </div>
         </div>
       </div>
@@ -31,12 +31,20 @@ function  templateDetails(each){
 }
 // cretaeDetail pide de ingreso,el id de la etiqueta contenedor, la query que se captura, y el array de los datos
 function createDetail(id_container, querys, dat){
-    let container= document.getElementById(id_container)  
-    movie = dat.find(each => each.name === querys)
-    let details= templateDetails(movie)
+ 
+  let container= document.getElementById(id_container)  
+  movie = dat.find(each => each.name === querys)
+  let details= templateDetails(movie)
     
-   container.innerHTML = details
+  container.innerHTML = details
    console.log(details)
 }
-createDetail('detail', name_query, dat)
-console.log(dat._id) 
+ async function fetchDetail(){
+  let urlApi= 'https://mh.up.railway.app/api/amazing-events'
+  let fetchResponse= await fetch(urlApi)
+  let response = await fetchResponse.json()
+
+  createDetail('detail', name_query, response.events)
+ }
+fetchDetail()
+console.log(id_query) 
