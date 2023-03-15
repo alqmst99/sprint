@@ -7,7 +7,7 @@ async function fetchApi2(){
     
     let check =  Array.from( document.querySelectorAll('.form-check-input:checked')).map(each => each.value)
     let filter= await response.events.filter(each => {
-        return (each.name.toLowerCase().includes(search)) && (check.length === 0 || check.includes(each.category)) 
+        return (each.name.toLowerCase().includes(search.toLowerCase())) && (check.length === 0 || check.includes(each.category)) 
     })
     console.log(filter)
     if (filter.length >0){
