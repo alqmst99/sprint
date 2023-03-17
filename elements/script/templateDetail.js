@@ -3,7 +3,7 @@ let query= location.search;
 let param = new URLSearchParams(query)
 let name_query= param.get('name')
 let cate_query= param.get('category')
-let id_query= param.get('id').valueOf()
+
 
 
 

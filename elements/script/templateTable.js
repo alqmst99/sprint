@@ -37,8 +37,7 @@ function templateTable1(max, min, capasidad, nombre, nombre2, nombre3) {
 }
 
 function templateTable2(par, par1, par2, par3, par4, par5) {
-  return `
- <table class="table table-striped">
+  return ` <table class="table table-striped">
     <table class="table">
  <thead>
   <tr>
@@ -89,12 +88,10 @@ function templateTable2(par, par1, par2, par3, par4, par5) {
 </tbody>
 </thead>
 </table>
-</table>
-`
+</table>`
 }
 function templateTable3(par, par1, par2, par3, par4, par5, par6) {
-  return `
-  <table class="table table-striped">
+  return `<table class="table table-striped">
   <table class="table">
 <thead>
 <tr>
@@ -154,8 +151,7 @@ function templateTable3(par, par1, par2, par3, par4, par5, par6) {
 </tbody>
 </thead>
 </table>
-</table>
-`
+</table>`
 }
 
 
