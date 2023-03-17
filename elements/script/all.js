@@ -8,7 +8,7 @@ function createCard(id_container, dat) {
    let eventc= document.getElementById(id_container)
 
         for (let eventos of dat) {
-           template.push(templates0(eventos.image, eventos.name, eventos.description, eventos.price,  eventos._id, eventos.category))
+           template.push(templates(eventos.image, eventos.name, eventos.description, eventos.price,  eventos._id, eventos.category))
         
         }
        

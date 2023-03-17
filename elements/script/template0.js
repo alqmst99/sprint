@@ -1,6 +1,6 @@
 //funciones de captura del objeto data
 
-let templates0 =(image,name,description, price, _id, category)=>{
+let templates =(image,name,description, price, _id, category)=>{
     return ` 
     
     
