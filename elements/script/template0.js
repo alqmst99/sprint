@@ -1,6 +1,6 @@
 //funciones de captura del objeto data
 
-let templates0=(image,name,description, price, _id, category)=>{
+let templates_0=(image,name,description, price, _id, category)=>{
     return ` 
       <div class="card m2 card-box shadow-sm" id="${name}" style="background: linear-gradient(90deg, rgba(226,62,217) 0%, rgba(9,20,168,0.3) 50%, rgba(226,62,217) 100%); border-radius: 10px;"> 
         <figure class="d-block ">

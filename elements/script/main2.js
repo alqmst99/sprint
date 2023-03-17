@@ -11,7 +11,7 @@
         for (let eventos of dat) {
             if (eventos.date <= concurrent) {
             console.log(templatep.join(''))
-            templatep.push( templates0(eventos.image, eventos.name, eventos.description, eventos.price, eventos._id, eventos.category))
+            templatep.push( templates_0(eventos.image, eventos.name, eventos.description, eventos.price, eventos._id, eventos.category))
 
         }
        

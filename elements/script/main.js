@@ -12,7 +12,7 @@ async function createCardE(id_container, dat) {
          for (let eventos of dat) {
             if (eventos.date >= concurrent) {
                       
-            template.push( templates0(eventos.image, eventos.name, eventos.description, eventos.price, eventos._id, eventos.category))
+            template.push( templates_0(eventos.image, eventos.name, eventos.description, eventos.price, eventos._id, eventos.category))
             }
         }
        
