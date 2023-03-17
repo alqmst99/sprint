@@ -3,7 +3,7 @@ let query= location.search;
 let param = new URLSearchParams(query)
 let name_query= param.get('name')
 let cate_query= param.get('category')
-
+let id_query= param.get('id')
 
 
 
@@ -14,15 +14,21 @@ function  templateDetails(each){
     <div class="card  mb-12 align-self-end aling-item-center">
       <div class="row no-gutters" style="background: linear-gradient(90deg, rgba(226,62,217) 0%, rgba(9,20,168,0.3) 50%, rgba(226,62,217) 100%); border-radius: 10px;">
         <div class="col-md-5 ">
-          <img src=${each.image} class="card-img-top img-fit" alt=${each.name} >
+          <img src=${each.image} class="card-img img-fluid" alt=${each.name} >
         </div>
         <div class="col-md-7">
           <div class="card-body">
-            <h2 class="card-title">${each.name} </h2>
+            
+            <h4 class="card-title"><b>Name: </b>${each.name}</h4>
+            <h4 class="card-text"><b>Description: </b></h4>
             <p class="card-text"><b>${each.description} </b></p>
-            <h5 class="card-text">${each.category} </h5>
-            <p class="card-text">${each.price} $</p>
-            <p class="card-text"><small class="text-muted">${each.date.substring(0,10)}</small></p>
+            
+            <h4 class="card-text"><b>Category: </b> ${each.category} </h4>
+            
+            <h4 class="card-text"><b>Capacity:</b> ${each.capacity} </h4>
+           
+            <h4 class="card-text"><b>Price:</b> ${each.price} $</h4>
+            <h4 class="card-text"><small class="text-muted">${each.date.substring(0,10)}</small></h4>
           </div>
         </div>
       </div>

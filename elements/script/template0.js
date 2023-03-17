@@ -1,6 +1,6 @@
 //funciones de captura del objeto data
 
-let templates0 =(image,name,description, price, _id, category)=>{
+let templates =(image,name,description, price, _id, category)=>{
     return ` 
     
     
@@ -16,7 +16,7 @@ let templates0 =(image,name,description, price, _id, category)=>{
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
               <button type="button" class="btn btn-lg btn-outline-primary">
-              <a href="elements/details.html?id=${_id}&&name=${name}&&category=${category}" target="p">ver</a></button>
+              <a href="./details.html?id=${_id}&&name=${name}&&category=${category}" target="p">ver</a></button>
               
             </div>
 
