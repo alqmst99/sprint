@@ -1,3 +1,4 @@
+//base de datos utiliado en los primeros ejercicios 
 let data = {
     "currentDate": "2022-01-01",
     "events": [

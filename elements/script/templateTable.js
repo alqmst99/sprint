@@ -1,3 +1,4 @@
+//template tabla estadística 1 Past
 function templateTable1(max, min, capasidad, nombre, nombre2, nombre3) {
   return ` <table class="table table-striped">
     <table class="table">
@@ -35,7 +36,7 @@ function templateTable1(max, min, capasidad, nombre, nombre2, nombre3) {
 </table>
     `
 }
-
+//template tabala estadística 2 Upcoming
 function templateTable2(par, par1, par2, par3, par4, par5) {
   return ` <table class="table table-striped">
     <table class="table">
@@ -90,6 +91,7 @@ function templateTable2(par, par1, par2, par3, par4, par5) {
 </table>
 </table>`
 }
+//template tabla estadistica 3 Past
 function templateTable3(par, par1, par2, par3, par4, par5, par6) {
   return `<table class="table table-striped">
   <table class="table">
@@ -154,7 +156,7 @@ function templateTable3(par, par1, par2, par3, par4, par5, par6) {
 </table>`
 }
 
-
+//Crea tabla 1
 function createTable(id, max, min, capasidad, nombre, nombre2, nombre3) {
   let container2 = document.getElementById(id)
   let table = templateTable1(max, min, capasidad, nombre, nombre2, nombre3)
@@ -162,6 +164,7 @@ function createTable(id, max, min, capasidad, nombre, nombre2, nombre3) {
   container2.innerHTML = table
 
 }
+//Crea tabla 2
 function createTable2(id,par, par1, par2, par3, par4, par5) {
   let container2 = document.getElementById(id)
   let table = templateTable2(par, par1, par2, par3, par4, par5)
@@ -169,6 +172,7 @@ function createTable2(id,par, par1, par2, par3, par4, par5) {
   container2.innerHTML = table
 
 }
+//Crea tabla 3
 function createTable3(id, par, par1, par2, par3, par4, par5,par6) {
   let container2 = document.getElementById(id)
   let table = templateTable3(par, par1, par2, par3, par4, par5, par6)
@@ -177,7 +181,7 @@ function createTable3(id, par, par1, par2, par3, par4, par5,par6) {
 
 
 }
-
+//consume la API para tabla 1 y crea la tabla
 async function fetchTable1() {
   try {
     let urlApi = 'https://mh.up.railway.app/api/amazing-events?time=past'
@@ -216,7 +220,7 @@ async function fetchTable1() {
   }
 }
 
-
+//Consume la API y crea tabala 2
 async function fetchTable3() {
   try {
     let urlApi = 'https://mh.up.railway.app/api/amazing-events?time=upcoming&&category=Party'
@@ -318,7 +322,7 @@ async function fetchTable3() {
     console.log(error)
   }
 }
-
+//Consume la API y crea tabla 3
 async function fetchTable4() {
   try {
     let urlApi = 'https://mh.up.railway.app/api/amazing-events?time=past&&category=Party'

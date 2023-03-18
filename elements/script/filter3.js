@@ -1,4 +1,4 @@
-//capture data  from api
+//consumo de datos por medio de API y filtro
 async function fetchApi3(){
     try{ 
     let urlApi= 'https://mh.up.railway.app/api/amazing-events'

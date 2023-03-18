@@ -1,7 +1,8 @@
+//template notFound element
 function notFound(){
-    return ` <div class="d-flex   vh-100" style="margin-top: 15px;">
+    return ` <div class="grid-aling-center " style="margin-top: 15px; margin-left: 30%">
     <div class="text-center justify-content-center">
-        <h1 class=" fw-bold">EVENT NOT FOUND</h1>
+        <h1 class="fw-bold">EVENT NOT FOUND</h1>
         <p class="fs-3"> <span class="text-danger">Opps!</span> The event has not been found.</p>
         <p class="lead">
             The Event you’re looking for doesn’t exist.
@@ -11,6 +12,7 @@ function notFound(){
 </div>
     `
 }
+//creacion nonFound element
 function printNon(id_container){
    let con= document.getElementById(id_container)
     con.innerHTML = notFound() 

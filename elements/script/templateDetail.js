@@ -7,7 +7,7 @@ let id_query= param.get('id')
 
 
 
-
+//templado de la tarjeta detalles 
 function  templateDetails(each){
     return `
      <div class="container" >
@@ -45,6 +45,7 @@ function createDetail(id_container, querys, dat){
   container.innerHTML = details
    console.log(details)
 }
+//Cosnume la API's para crear la tarjeta
  async function fetchDetail(){
   let urlApi= 'https://mh.up.railway.app/api/amazing-events'
   let fetchResponse= await fetch(urlApi)

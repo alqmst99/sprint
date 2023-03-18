@@ -1,5 +1,4 @@
-
-   
+//Creacion de card upcoming con consumo de API  
 async function createCardE(id_container, dat) {
     let urlApi= 'https://mh.up.railway.app/api/amazing-events'
     let fetchResponse= await fetch(urlApi)

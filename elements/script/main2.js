@@ -1,5 +1,4 @@
-
-
+//creacion de tarjetas para Eventos pasados desde API's
  async function createCardP(id_container, dat) {
     let templatep = []
     let eventsp = document.getElementById(id_container)

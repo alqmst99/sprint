@@ -1,6 +1,4 @@
-
-
-
+//template  checks and search y creacion de checks and search
 function printCheck2(_id, array_cat) {
     let container = document.getElementById(_id)
     array_cat = array_cat.map(each => {
@@ -14,6 +12,7 @@ function printCheck2(_id, array_cat) {
     array_cat.push(`<input onkeyup="fetchApi2()" id="search" class="contact-input col-sm-6 col-md-12" type="text" name="texto" placeholder="search">`)
     container.innerHTML = array_cat.join('')
 }
+//Cosnumo de API y creacion del array para checks
 async function fetchApi2() {
     try {
         let urlApi = 'https://mh.up.railway.app/api/amazing-events?category'

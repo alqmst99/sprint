@@ -1,8 +1,4 @@
-
-
-
-
-
+//Creacion de las tarjetas desde API's
 function createCard(id_container, dat) {
     let templatea = []
    let eventc= document.getElementById(id_container)

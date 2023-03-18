@@ -1,5 +1,4 @@
-//funciones de captura del objeto data
-
+//template para la creacion de tarjetas all
 let templates=(image,name,description, price, _id, category)=>{
     return ` 
     
