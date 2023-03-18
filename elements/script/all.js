@@ -14,7 +14,7 @@ function createCard(id_container, dat) {
        
     
     
-    eventc.innerHTML = template.join('')
+    eventc.innerHTML = templatea.join('')
 }
 
 
