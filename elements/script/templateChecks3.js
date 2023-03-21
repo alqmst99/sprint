@@ -28,11 +28,9 @@ async function fetchApi3() {
             }
         })
         printCheck3('check', array_cat)
-       
-    }
+     }
     catch (error) {
         console.log(error)
     }
-
 }
 fetchApi3()

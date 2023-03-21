@@ -10,7 +10,7 @@ async function fetchApi2(){
         return (each.name.toLowerCase().includes(search.toLowerCase())|| each.category.toLowerCase().includes(search.toLowerCase())) && (check.length === 0 || check.includes(each.category)) 
     })
     console.log(filter)
-    if (filter.length >0){
+    if (await filter.length >0){
        
         createCardE('event-card', filter)
        
