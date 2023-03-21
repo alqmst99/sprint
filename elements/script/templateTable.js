@@ -1,10 +1,10 @@
 //template tabla estadística 1 Past
 function templateTable1(max, min, capasidad, nombre, nombre2, nombre3) {
   return ` <table class="table table-striped">
-    <table class="table">
-        <thead >
+   
+        <thead>
           <tr>
-            <th scope="colgroup"><h1>Events Statistics</h1></th>
+            <th scope="colgroup"><h3>Events Statistics</h3></th>
             
           </tr>
         </thead>  
@@ -26,158 +26,157 @@ function templateTable1(max, min, capasidad, nombre, nombre2, nombre3) {
            
             <td><b>${max} </td>
             <td><b>${min} </td>
-            <td><b>${capasidad} </td>
+            <td><b>${capasidad}</td>
           </tr>
           
         </tbody>
         
          
-      </table>
+     
 </table>
     `
 }
 //template tabala estadística 2 Upcoming
 function templateTable2(par, par1, par2, par3, par4, par5) {
   return ` <table class="table table-striped">
-    <table class="table">
+    
  <thead>
   <tr>
-    <th scope="col"><h3>Upcoming event statistics category</h3></th>
+    <th scope="colgroup"><h3>Upcoming event statistics category</h3></th>
     </tr>
 </thead>
 <tbody>
   <tr>   
-    <td><b>Categories</td>
+    <th scope="row"><b>Categories</th>
     <td><b>Revenues</td>
     <td><b>Persentage of attendance</td>
   </tr>
   <tr>
-    <td>${par.category}</td>
+    <th scope="row">${par.category}</th>
     <td>$${par.ganacia} </td>
-    <td>${((par.estimate_total*100)/par.capacity_total).toFixed(1)}%</td>
+    <td>${((par.prom)).toFixed(1)}%</td>
   </tr>
   <tr>
-   <td>${par1.category} </td>
+   <th scope="row">${par1.category} </th>
   <td>$${par1.ganacia}</td>
-  <td>${((par1.estimate_total*100)/par1.capacity_total).toFixed(1)}%</td>
+  <td>${((par1.prom)).toFixed(1)}%</td>
 </tr>
 <tr>
    
-<td>${par2.category} </td>
+<th scope="row">${par2.category} </th>
 <td>$${par2.ganacia}</td>
-<td>${((par2.estimate_total*100)/par2.capacity_total).toFixed(1)}%</td>
+<td>${((par2.prom)).toFixed(1)}%</td>
 </tr>
 <tr>
    
-<td>${par3.category} </td>
+<th scope="row">${par3.category} </th>
 <td>$${par3.ganacia}</td>
-<td>${((par3.estimate_total*100)/par3.capacity_total).toFixed(1)}%</td>
+<td>${((par3.prom)).toFixed(1)}%</td>
 </tr>
 <tr>
    
-<td>${par4.category} </td>
+<th scope="row">${par4.category} </th>
 <td>$${par4.ganacia}</td>
-<td>${((par4.estimate_total*100)/par4.capacity_total).toFixed(1)}%</td>%
+<td>${((par4.prom)).toFixed(1)}%</td>%
 <tr>
    
-<td>${par5.category} </td>
+<th scope="row">${par5.category} </th>
 <td>$${par5.ganacia}</td>
-<td>${((par5.estimate_total*100)/par5.capacity_total).toFixed(1)}%</td>
+<td>${((par5.prom)).toFixed(1)}%</td>
 </tr>
 <tr>
 
 </tbody>
-</thead>
-</table>
+
+
 </table>`
 }
 //template tabla estadistica 3 Past
 function templateTable3(par, par1, par2, par3, par4, par5, par6) {
-  return `<table class="table table-striped">
-  <table class="table">
-<thead>
-<tr>
-<th scope="col"><h3>Past event statistics category</h3></th> 
+  return `<table class="table table-striped text-aling-center">
+ 
+    <thead>
+      <tr>
+         <th scope="colgroup"><h3>Past event statistics category</h3></th> 
   
-</tr>
-</thead>
-<tbody>
-<tr>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
  
-  <td><b>Categories</td>
-  <td><b>Revenues</td>
-  <td><b>Persentage of attendance</td>
-</tr>
-<tr>
+      <th scope="row"><b>Categories</th>
+      <td><b>Revenues</td>
+      <td><b>Persentage of attendance</td>
+    </tr>
+    <tr>
+       <th scope="row">${par.category}</th>
+      <td>$${par.ganacia} </td>
+      <td>${((par.prom)).toFixed(1)}%</td>
+     </tr>
+     <tr>
+        <th scope="row">${par1.category}</th>
+        <td>$${par1.ganacia}</td>
+        <td>${((par1.prom)).toFixed(1)}%</td>
+      </tr>
+      <tr>
  
-  <td>${par.category}</td>
-  <td>$${par.ganacia} </td>
-  <td>${((par.estimate_total*100)/par.capacity_total).toFixed(1)}%</td>
-</tr>
-<tr>
+        <th scope="row">${par2.category}</th>
+        <td>$${par2.ganacia}</td>
+        <td>${((par2.prom)).toFixed(1)}%</td>
+      </tr>
+      <tr>
  
-<td>${par1.category} </td>
-<td>$${par1.ganacia}</td>
-<td>${((par1.estimate_total*100)/par1.capacity_total).toFixed(1)}%</td>
-</tr>
-<tr>
+          <th scope="row">${par3.category}</th>
+          <td>$${par3.ganacia}</td>
+          <td>${((par3.prom)).toFixed(1)}%</td>
+        </tr>
+        <tr>
  
-<td>${par2.category} </td>
-<td>$${par2.ganacia}</td>
-<td>${((par2.estimate_total*100)/par2.capacity_total).toFixed(1)}%</td>
-</tr>
-<tr>
- 
-<td>${par3.category} </td>
-<td>$${par3.ganacia}</td>
-<td>${((par3.estimate_total*100)/par3.capacity_total).toFixed(1)}%</td>
-</tr>
-<tr>
- 
-<td>${par4.category} </td>
-<td>$${par4.ganacia}</td>
-<td>${((par4.estimate_total*100)/par4.capacity_total).toFixed(1)}%</td>%
-<tr>
- 
-<td>${par5.category} </td>
-<td>$${par5.ganacia}</td>
-<td>${((par5.estimate_total*100)/par5.capacity_total).toFixed(1)}%</td>
-</tr>
-<tr>
-<td>${par6.category} </td>
-<td>$${par6.ganacia}</td>
-<td>${((par6.estimate_total*100)/par6.capacity_total).toFixed(1)}%</td>
-</tr>
-<tr>
+          <th scope="row">${par4.category}</th>
+          <td>$${par4.ganacia}</td>
+          <td>${((par4.prom)).toFixed(1)}%</td>%
+      </tr>
+      <tr>
+          
+          <th scope="row">${par5.category}</th>
+          <td>$${par5.ganacia}</td>
+          <td>${((par5.prom)).toFixed(1)}%</td>
+        </tr>
+        <tr>
+          <th scope="row">${par6.category}</th>
+          <td>$${par6.ganacia}</td>
+          <td>${(par6.prom).toFixed(1)}%</td>
+        </tr>
+        <tr>
 
-</tbody>
-</thead>
-</table>
+      </tbody>
+
+      
 </table>`
 }
 
 //Crea tabla 1
 function createTable(id, max, min, capasidad, nombre, nombre2, nombre3) {
-  let container2 = document.getElementById(id)
+  let container = document.getElementById(id)
   let table = templateTable1(max, min, capasidad, nombre, nombre2, nombre3)
 
-  container2.innerHTML = table
+  container.innerHTML = table
 
 }
 //Crea tabla 2
 function createTable2(id,par, par1, par2, par3, par4, par5) {
   let container2 = document.getElementById(id)
-  let table = templateTable2(par, par1, par2, par3, par4, par5)
+  let table2 = templateTable2(par, par1, par2, par3, par4, par5)
 
-  container2.innerHTML = table
+  container2.innerHTML = table2
 
 }
 //Crea tabla 3
 function createTable3(id, par, par1, par2, par3, par4, par5,par6) {
-  let container2 = document.getElementById(id)
-  let table = templateTable3(par, par1, par2, par3, par4, par5, par6)
+  let container3 = document.getElementById(id)
+  let table3 = templateTable3(par, par1, par2, par3, par4, par5, par6)
 
-  container2.innerHTML = table
+  container3.innerHTML = table3
 
 
 }
@@ -219,9 +218,10 @@ async function fetchTable1() {
     console.log(error)
   }
 }
+fetchTable1()
 
 //Consume la API y crea tabala 2
-async function fetchTable3() {
+async function fetchTable2() {
   try {
     let urlApi = 'https://mh.up.railway.app/api/amazing-events?time=upcoming&&category=Party'
     let fetchResponse = await fetch(urlApi)
@@ -235,6 +235,7 @@ async function fetchTable3() {
       obj_acc.estimate_total= a.estimate_total + obj_acc.estimate
       obj_acc.ganacia= a.ganacia + obj_acc.estimate*obj_acc.price
       obj_acc.capacity_total= a.capacity_total + obj_acc.capacity
+      obj_acc.prom= (obj_acc.estimate_total*100)/obj_acc.capacity_total
  return obj_acc
     },{estimate_total:0, ganacia:0, capacity_total:0})
    
@@ -250,6 +251,7 @@ async function fetchTable3() {
       obj_acc.estimate_total= a.estimate_total + obj_acc.estimate
       obj_acc.ganacia= a.ganacia + obj_acc.estimate*obj_acc.price
       obj_acc.capacity_total= a.capacity_total + obj_acc.capacity
+      obj_acc.prom= (obj_acc.estimate_total*100)/obj_acc.capacity_total
  return obj_acc
     },{estimate_total:0, ganacia:0, capacity_total:0})
 
@@ -265,6 +267,7 @@ async function fetchTable3() {
       obj_acc.estimate_total= a.estimate_total + obj_acc.estimate
       obj_acc.ganacia= a.ganacia + obj_acc.estimate*obj_acc.price
       obj_acc.capacity_total= a.capacity_total + obj_acc.capacity
+      obj_acc.prom= (obj_acc.estimate_total*100)/obj_acc.capacity_total
  return obj_acc
     },{estimate_total:0, ganacia:0, capacity_total:0})
     let urlApi3 = 'https://mh.up.railway.app/api/amazing-events?time=upcoming&&category=Race'
@@ -279,6 +282,7 @@ async function fetchTable3() {
       obj_acc.estimate_total= a.estimate_total + obj_acc.estimate
       obj_acc.ganacia= a.ganacia + obj_acc.estimate*obj_acc.price
       obj_acc.capacity_total= a.capacity_total + obj_acc.capacity
+      obj_acc.prom= (obj_acc.estimate_total*100)/obj_acc.capacity_total
  return obj_acc
     },{estimate_total:0, ganacia:0, capacity_total:0})
     let urlApi4 = 'https://mh.up.railway.app/api/amazing-events?time=upcoming&&category=Concert'
@@ -293,6 +297,7 @@ async function fetchTable3() {
       obj_acc.estimate_total= a.estimate_total + obj_acc.estimate
       obj_acc.ganacia= a.ganacia + obj_acc.estimate*obj_acc.price
       obj_acc.capacity_total= a.capacity_total + obj_acc.capacity
+      obj_acc.prom= (obj_acc.estimate_total*100)/obj_acc.capacity_total
  return obj_acc
     },{estimate_total:0, ganacia:0, capacity_total:0})
 
@@ -308,22 +313,24 @@ async function fetchTable3() {
       obj_acc.estimate_total= a.estimate_total + obj_acc.estimate
       obj_acc.ganacia= a.ganacia + obj_acc.estimate*obj_acc.price
       obj_acc.capacity_total= a.capacity_total + obj_acc.capacity
+      obj_acc.prom= (obj_acc.estimate_total*100)/obj_acc.capacity_total
  return obj_acc
     },{estimate_total:0, ganacia:0, capacity_total:0})
 
 
 
     
-    console.log(par, par1, par2, par3, par4, par5)
    
-    createTable2('table2',par, par1, par2, par3, par4, par5)
+   
+    createTable2('table_2',par, par1, par2, par3, par4, par5)
 
   } catch (error) {
     console.log(error)
   }
 }
+fetchTable2()
 //Consume la API y crea tabla 3
-async function fetchTable4() {
+async function fetchTable3() {
   try {
     let urlApi = 'https://mh.up.railway.app/api/amazing-events?time=past&&category=Party'
     let fetchResponse = await fetch(urlApi)
@@ -337,6 +344,7 @@ async function fetchTable4() {
       obj_acc.estimate_total= a.estimate_total + obj_acc.assistance
       obj_acc.ganacia= a.ganacia + obj_acc.assistance*obj_acc.price
       obj_acc.capacity_total= a.capacity_total + obj_acc.capacity
+      obj_acc.prom= (obj_acc.estimate_total*100)/obj_acc.capacity_total
  return obj_acc
     },{estimate_total:0, ganacia:0, capacity_total:0})
    
@@ -352,6 +360,7 @@ async function fetchTable4() {
       obj_acc.estimate_total= a.estimate_total + obj_acc.assistance
       obj_acc.ganacia= a.ganacia + obj_acc.assistance*obj_acc.price
       obj_acc.capacity_total= a.capacity_total + obj_acc.capacity
+      obj_acc.prom= (obj_acc.estimate_total*100)/obj_acc.capacity_total
  return obj_acc
     },{estimate_total:0, ganacia:0, capacity_total:0})
 
@@ -367,6 +376,7 @@ async function fetchTable4() {
       obj_acc.estimate_total= a.estimate_total + obj_acc.assistance
       obj_acc.ganacia= a.ganacia + obj_acc.assistance*obj_acc.price
       obj_acc.capacity_total= a.capacity_total + obj_acc.capacity
+      obj_acc.prom= (obj_acc.estimate_total*100)/obj_acc.capacity_total
  return obj_acc
     },{estimate_total:0, ganacia:0, capacity_total:0})
     let urlApi3 = 'https://mh.up.railway.app/api/amazing-events?time=past&&category=Race'
@@ -381,6 +391,7 @@ async function fetchTable4() {
       obj_acc.estimate_total= a.estimate_total + obj_acc.assistance
       obj_acc.ganacia= a.ganacia + obj_acc.assistance*obj_acc.price
       obj_acc.capacity_total= a.capacity_total + obj_acc.capacity
+      obj_acc.prom= (obj_acc.estimate_total*100)/obj_acc.capacity_total
  return obj_acc
     },{estimate_total:0, ganacia:0, capacity_total:0})
     let urlApi4 = 'https://mh.up.railway.app/api/amazing-events?time=past&&category=Concert'
@@ -395,6 +406,7 @@ async function fetchTable4() {
       obj_acc.estimate_total= a.estimate_total + obj_acc.assistance
       obj_acc.ganacia= a.ganacia + obj_acc.assistance*obj_acc.price
       obj_acc.capacity_total= a.capacity_total + obj_acc.capacity
+      obj_acc.prom= (obj_acc.estimate_total*100)/obj_acc.capacity_total
  return obj_acc
     },{estimate_total:0, ganacia:0, capacity_total:0})
 
@@ -410,6 +422,7 @@ async function fetchTable4() {
       obj_acc.estimate_total= a.estimate_total + obj_acc.assistance
       obj_acc.ganacia= a.ganacia + obj_acc.assistance*obj_acc.price
       obj_acc.capacity_total= a.capacity_total + obj_acc.capacity
+      obj_acc.prom= (obj_acc.estimate_total*100)/obj_acc.capacity_total
  return obj_acc
     },{estimate_total:0, ganacia:0, capacity_total:0})
 
@@ -425,18 +438,15 @@ async function fetchTable4() {
       obj_acc.estimate_total= a.estimate_total + obj_acc.assistance
       obj_acc.ganacia= a.ganacia + obj_acc.assistance*obj_acc.price
       obj_acc.capacity_total= a.capacity_total + obj_acc.capacity
+      obj_acc.prom= (obj_acc.estimate_total*100)/obj_acc.capacity_total
  return obj_acc
     },{estimate_total:0, ganacia:0, capacity_total:0})
 
-    
-    console.log(par, par1, par2, par3, par4, par5, par6)
-   
-    createTable3('table3',par, par1, par2, par3, par4, par5, par6)
+      
+    createTable3('table_3',par, par1, par2, par3, par4, par5, par6)
 
   } catch (error) {
     console.log(error)
   }
 }
-fetchTable1()
 fetchTable3()
-fetchTable4()
