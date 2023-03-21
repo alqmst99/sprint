@@ -1,13 +1,12 @@
 //template tabla estadística 1 Past
 function templateTable1(max, min, capasidad, nombre, nombre2, nombre3) {
-  return ` <table class="table table-striped">
+  return ` <table class="table table-striped table-hover">
    
         <thead>
-          <tr>
-            <th scope="colgroup"><h3>Events Statistics</h3></th>
-            
-          </tr>
-        </thead>  
+        <tr>
+    <th colspan="3"><h3>Events Statistics</h3><th>
+<tr> 
+      </thead>  
         <tbody>
           <tr>
            
@@ -24,8 +23,8 @@ function templateTable1(max, min, capasidad, nombre, nombre2, nombre3) {
         
           <tr>
            
-            <td><b>${max} </td>
-            <td><b>${min} </td>
+            <td><b>${max}% </td>
+            <td><b>${min}% </td>
             <td><b>${capasidad}</td>
           </tr>
           
@@ -38,12 +37,14 @@ function templateTable1(max, min, capasidad, nombre, nombre2, nombre3) {
 }
 //template tabala estadística 2 Upcoming
 function templateTable2(par, par1, par2, par3, par4, par5) {
-  return ` <table class="table table-striped">
+  return ` <table class="table table-striped table-hover">
     
  <thead>
-  <tr>
-    <th scope="colgroup"><h3>Upcoming event statistics category</h3></th>
-    </tr>
+ <tr>
+    <th colspan="3"><h3>Upcoming event statistics category</h3> <th>
+<tr> 
+    
+   
 </thead>
 <tbody>
   <tr>   
@@ -93,14 +94,14 @@ function templateTable2(par, par1, par2, par3, par4, par5) {
 }
 //template tabla estadistica 3 Past
 function templateTable3(par, par1, par2, par3, par4, par5, par6) {
-  return `<table class="table table-striped text-aling-center">
+  return `<table class="table table-striped table-hover">
  
     <thead>
-      <tr>
-         <th scope="colgroup"><h3>Past event statistics category</h3></th> 
-  
-      </tr>
-    </thead>
+    <tr>
+    <th colspan="3"><h3>Past event statistics category</h3><th>
+     <tr> 
+     </thead>
+      
     <tbody>
     <tr>
  
@@ -187,23 +188,24 @@ async function fetchTable1() {
     let fetchResponse = await fetch(urlApi)
     let response = await fetchResponse.json()
     let event_max = []
-    await response.events.reduce((acc, event) => { return event_max.push(event.assistance) })
-    let max = Math.max(...event_max)
+    await response.events.reduce((acc, event) => { return event_max.push((event.assistance*100)/event.capacity) })
+    let max = Math.max(...event_max).toFixed(2)
     let event_min = []
-    await response.events.reduce((acc, each) => { return event_min.push(each.assistance) })
-    let min = Math.min(...event_min)
+    await response.events.reduce((acc, each) => { return event_min.push((each.assistance*100)/each.capacity) })
+    let min = Math.min(...event_min).toFixed(1)
     let capasity = []
     await response.events.reduce((acc, each) => capasity.push(each.capacity))
     let max_c = Math.max(...capasity)
 
     let nombre = await response.events.find(each => {
-      if (each.assistance === max) {
+      
+      if (((each.assistance*100)/each.capacity).toFixed(2) === max) {
         return each.name
       }
     })
 
     let nombre2 = await response.events.find(each => {
-      if (each.assistance === min) {
+      if (((each.assistance*100)/each.capacity).toFixed(1) === min) {
         return each.name
       }
     })
